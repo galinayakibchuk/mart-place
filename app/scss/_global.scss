@@ -6,6 +6,21 @@ html{
 *::after{
     box-sizing: inherit;
 }
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
 .box{
     display: flex;
 }
@@ -54,4 +69,33 @@ button{
 }
 .violet{
     color: $violet;
+}
+.breadcrumbs{
+    &__inner{
+        padding: 38px 0px 30px;
+    }
+    &__list{
+        li{
+            display: inline-block;
+            position: relative; 
+            & + li{
+                padding-left: 25px;
+                &::before{
+                    content: '/';
+                    position: absolute;
+                    left: 8px;
+                    color: #fff;
+                }
+            }
+            &:last-child{
+                a, 
+                span{
+                    color: #bfcad7;
+                } 
+            }
+        }
+        a{
+            color: #fff;
+        }
+    }
 }
