@@ -14,7 +14,6 @@ $(function(){
     $('input[type="file"], select').styler();
 
 
-
     $('.sorting__icons-list').on('click', function(){
         $('.product__category-item').addClass('list');
         $('.sorting__icons-list').addClass('active');
@@ -50,6 +49,15 @@ $(function(){
         
     });
 
+
+    $('.product__main-tabs .tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+            $('.product__main-tabs').find('.tab-item').removeClass('active-tab').hide();
+            $('.product__main-tabs .tabs').find('.tab').removeClass('active');
+            $(this).addClass('active');
+            $('#'+id).addClass('active-tab').fadeIn();
+            return false;
+        });
 
 
     $('.followers__items').slick({
