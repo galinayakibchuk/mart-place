@@ -1369,6 +1369,43 @@
             margin-left: 40px;
         }
     }
+    ul{
+        bottom: 1px;
+        font-size: 14px;
+        width: 220px;
+        background-color: #ffffff;
+        z-index: 2;
+        right: 0;
+        border: 1px solid #ececec;
+        border-top: none;
+        li{
+            padding: 10px 19px;
+            position: relative;
+            &::after{
+                content: '';
+                background-color:#eceff2;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            &:hover{
+                background-color: #ececec;
+            }
+            &:first-child{
+                &::before{
+                    content: '';
+                    background-color:#eceff2;
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }    
     label{
         width: 220px;
         border-radius: 4px;
@@ -1379,6 +1416,14 @@
         line-height: 14px;
         color: $text;
         position: relative;
+        ul{
+            bottom: -15px;
+            width: 170px;
+            right: 15px;
+            li{
+                padding: 10px 15px;
+            }
+        }
         .jq-selectbox__select{
             position: absolute;
             border: none;
@@ -1421,7 +1466,48 @@
             padding: 10px 19px;
         }
     }
-
+}
+.sorting__inner-title{
+    font-size: 24px;
+    color: #000;
+    span{
+        font-weight: 500;
+    }
+}
+.sorting__filter-btn{
+    max-width: 143px;
+    width: 100%;
+    position: relative;
+    padding: 10px 30px;
+    transition: all .5s;
+    &::before,
+    &::after{
+        content: '';
+        width: 1px;
+        height: 100px;
+        background-color:#eceff2;
+        position: absolute;
+        top: -28px;
+    }
+    &::before{
+        left: 0;
+    }
+    &::after{
+        right: 0;
+    }
+    ul{
+        bottom: -10px;
+        font-size: 16px;
+        width: 140px;
+        right: 28px;
+    }
+    .jq-selectbox__select-text{
+        margin: 0;
+    }
+    .jq-selectbox__trigger{
+        top: -9px;
+        right: -18px;
+    }  
 }
 .jq-selectbox__trigger {
     position: absolute;
@@ -2328,5 +2414,81 @@ ol{
     margin-right: 41px;
 }
 //end items__mini
-
 //end product-single
+
+//start page-favourites
+.favourites{
+    .product__category-item{
+        max-width: 360px;
+        width: 100%;
+        .product__category-item__img{
+            min-height: 230px; 
+        }
+        .slider__content{
+            padding: 30px 30px 18px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        p{
+            display: block;
+            margin: 35px 0;
+            line-height: 24px;
+        }
+        .slider__item-user__box{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .slider__item-user{
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+        .slider__box{
+            margin-top: 0;
+            padding-top: 17px;
+            display: inline-block;
+            .slider__item-category{
+                display: none;
+            }
+        }
+        .slider__content-box{
+            .slider__item-category{
+                display: block;
+            }
+        } 
+        .lnr-heart,
+        .lnr-cart{
+            display: inline-block;
+        } 
+        .slider__item-price{
+            padding: 6px 17px;
+            margin-right: 17px;
+        }
+        .lnr-heart{
+            color: $violet;
+            span{
+                color:#6f7d8d;
+                margin-left: 7px;
+                margin-right: 15px;
+            }  
+        }
+        .lnr-cart{
+            right: 0;
+            position: inherit;
+        } 
+        .rate-star.jq-ry-container{
+            margin-right: 29px;
+        }
+    }
+    .pagination{
+        margin-top: 0px;
+        position: inherit;
+    }
+    .pagination__list{
+        position: inherit;
+        max-width: 385px;
+    }
+}
+//end page-favourites
