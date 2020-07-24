@@ -2587,3 +2587,34 @@ ol{
     }
 }
 //end page-login
+//start page-register
+.register{
+    padding: 70px 0px 120px;
+    background-color: $bgdark;
+    .login__form-subtitle{
+        line-height: 28px;
+    }
+}
+//end page-register
+//start page-404
+.page-404{
+    padding: 80px 0px 100px;
+    text-align: center;
+    .btn{
+        background-color: $blue;
+        height: 50px;
+        margin: 0 auto;
+        a{
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+}
+.page-404__title{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #000;
+}
+//end page-404
