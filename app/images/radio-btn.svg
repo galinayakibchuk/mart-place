@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #0674ec } 
+	</style>
+	<g id="Login">
+		<g id="Remember">
+			<path id="Check icon copy 5" class="shp0" d="M19.07 19.07C22.97 15.16 22.97 8.83 19.07 4.93C15.16 1.02 8.84 1.02 4.93 4.93C1.02 8.83 1.02 15.16 4.93 19.07C8.84 22.97 15.17 22.97 19.07 19.07ZM8.41 10.47L10.66 12.72L15.59 7.8L17.33 9.54L12.41 14.46L10.66 16.2L8.92 14.46L6.67 12.21L8.41 10.47Z" />
+		</g>
+	</g>
+</svg>
