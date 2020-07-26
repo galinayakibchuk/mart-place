@@ -1826,7 +1826,6 @@
 //end sorting
 //start join
 .join{
-    padding: 110px 0px;
     text-align: center;
     background-position: top center;
     background-repeat: no-repeat;
@@ -2797,4 +2796,63 @@ ol{
         margin-bottom: 50px;
     }
 }
-//start conditions-page
+//end conditions-page
+//start tutorial page
+.tutorial__top{
+    padding-top: 90px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    &-title{
+        font-size: 30px;
+        line-height: 50px;
+        color: #fff;
+        font-weight: 500;
+        span{
+            font-weight: 300;
+            display: block;
+        }
+    }
+}
+.tutorial__item{
+    display: flex;
+    padding: 100px 0px;
+    &-img{
+        max-width: 570px;
+    }
+    &-content{
+        max-width: 570px;
+        padding-left: 110px;
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 36px;
+        color: #000;
+        margin-bottom:35px;
+    }
+    p{
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
+    .btn{
+        width: 170px;
+        height: 50px;
+        padding: 15px;
+        transition: all .5s;
+        &:hover{
+            background-color: $blue;
+        color: #fff;
+        } 
+    }
+}
+.tutorial__item-dark{
+    background-color: $bgdark;
+    .tutorial__item-content{
+        padding-left: 0;
+    }
+    .tutorial__item-img{
+        padding-left: 100px;
+    }
+}
+//end tutorial page
