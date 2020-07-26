@@ -2856,3 +2856,127 @@ ol{
     }
 }
 //end tutorial page
+//start pricing page
+.pricing{
+    background-color: $bgdark;
+    text-align: center;
+    padding: 120px 0px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+}
+.pricing__title{
+    font-size: 36px;
+    line-height: 48px;
+    color: #000;
+    margin-bottom: 20px;
+    a{
+        color: $blue;
+    }
+}
+.pricing__text{
+    line-height: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.pricing__inner-item{
+    background-color: #fff;
+    padding: 28px 30px 30px 30px;
+    border-radius: 4px;
+    box-shadow:0px 2px 2px rgba(108,111,115,0.1);
+    max-width: 360px;
+    width: 100%;
+    &.item-pink{
+        border-top: 2px solid #ff6a6c;
+        .pricing__inner-item__btn{
+            background-color:#ff6a6c
+        }
+    }
+    &.item-blue{
+        border-top: 2px solid $blue;
+        .pricing__inner-item__btn{
+            background-color:$blue;
+        }
+    }
+    &.item-orange{
+        border-top: 2px solid #feb71d;
+        .pricing__inner-item__btn{
+            background-color:#feb71d;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #000;
+        padding-bottom: 20px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: #ececec;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__price{
+        font-size: 36px;
+        line-height: 36px;
+        color: #000;
+        padding-left: 12px;
+        position: relative;
+        margin: 30px 0px 50px;
+        display: inline-block;
+        span{
+            font-size: 16px;
+            color: $text;
+        }
+        &::before{
+            content: '$';
+            position: absolute;
+            font-size: 18px;
+            line-height: 18px;
+            color: #000;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+.pricing__inner-item__list{
+    text-align: left;
+    margin-bottom: 30px;
+    li{
+        padding-left: 23px;
+        line-height: 36px;
+        position: relative;
+        &::before{
+            content: url(../images/content/price-marker.svg);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        a{
+            font-weight: 500;
+            color: #000;
+        }
+        span{
+            margin-left: 25px;
+            font-family: 'Linearicons-Free';
+            font-size: 18px;
+        }
+    }
+}
+.pricing__inner-item__btn{
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 11px;
+    color: #fff;
+}
+//end pricing page
