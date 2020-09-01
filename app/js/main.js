@@ -1,5 +1,13 @@
 $(function(){
 
+    $('.slider__inner').slick({
+        prevArrows: '<button class="slick-prev slick-arrow"><img src="../images/slick-prev.png" alt=""></button>',
+        nextArrows: '<button class="slick-next slick-arrow"><img src="../images/slick-next.png" alt=""></button>',
+        infinite: true
+        
+    });
+        
+
     $(".js-range-slider").ionRangeSlider({
         type: "double",
         min: 0,
@@ -9,9 +17,10 @@ $(function(){
         grid: true,
         prefix: "$"
     });
-        
+
 
     $('input[type="file"], select').styler();
+
 
 
     $('.sorting__icons-list').on('click', function(){
@@ -34,19 +43,13 @@ $(function(){
         $('.sorting__category-new').removeClass('active');
     });
 
+
+
     
     $('.rate-star').rateYo({
         rating: 5,
         starWidth: "12px",
         readOnly: true
-    });
-
-
-    $('.slider__inner').slick({
-        prevArrows: '<button class="slick-prev slick-arrow lnr lnr-chevron-right></button>',
-        nextArrows: '<button class="slick-next slick-arrow lnr lnr-chevron-left"></button>',
-        infinite: true
-        
     });
 
 
