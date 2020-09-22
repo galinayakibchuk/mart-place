@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'global';
 @import 'fonts';
+@import 'media';
 
 //start header
 .header__top-wrapper{
@@ -31,6 +32,20 @@
 
 .header__top-inner{
     position: relative;
+}
+.header__top-inner__list{
+    background-color: #fff;
+    z-index: 2;
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
 }
 .header__icon-messages{
     transition: all 0.5s;
@@ -373,6 +388,12 @@
 .header__shopping-list{
     display: none;
 }
+.header__user-btn{
+    font-size: 50px;
+    font-family: 'Linearicons-Free';
+    color: $text;
+    display: none;
+}
 .header__user{
     padding-left: 72px;
     margin-left: 13px;
@@ -446,7 +467,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+}
+.header__menu-btn{
+    width: 30px;
+    cursor: pointer;
+    display: none;
+    div{
+        height: 2px;
+        width: 100%;
+        background-color: $text;
+        & + div{
+            margin-top: 5px;
+        }
+    }
 }
 .header__menu{
     position: relative;
@@ -574,16 +607,17 @@
 }
 .header__search{
     position: relative;
-    margin: 0;
+    margin: 0 0 0 20px;
+    max-width: 360px;
     input{
         border: 1px solid #d9dfe5;
         border-radius: 23px;
         padding: 7px 85px 7px 25px;
         outline: none;
-        width: 360px;
         position: relative;
         line-height: 30px;
         margin: 0;
+        width: 100%;
         &:placeholder{
             color: #898f96;
             font-size: 15px;        
@@ -604,8 +638,9 @@
         content: "\e86f";
         font-family: 'Linearicons-Free';
         position: absolute;
-        top: 16px;
-        right: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 15px;
         color: #fff;
         }
@@ -656,9 +691,11 @@
 .search__form-wrapper{
     position: absolute;
     bottom: -69px;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0px auto;
 }
 .search__form{
-    width: 1140px;
     min-height: 135px;
     padding: 40px;
     background-color: #fff;
@@ -676,15 +713,16 @@
         height: 13px;
         background-color: #fff;
         opacity: 0.5;
+        width: 100%;
     }
     &::after{
-        width: 1080px;
+        max-width: 1080px;
         top: -26px;
         right: 30px;
         height: 26px;
     }
     &::before{
-        width: 1110px;
+        max-width: 1110px;
         right: 15px;
     }
     .search__form-inner{
@@ -765,7 +803,8 @@
         }
     }
     .search__form-inner__btn{
-        width: 223px;
+        max-width: 223px;
+        width: 100%;
         margin-left: 30px;
         background-color: $blue;
         border-radius: 4px;
@@ -1492,10 +1531,6 @@
 }
 .join__btn{
     margin: 0 auto;
-    &:hover{
-        background-color: $blue;
-        color: #fff;
-    }
 }
 //end join
 //start footer
@@ -1819,14 +1854,14 @@
         color: $text;
         padding-left: 18px;
         position: relative;
-    }
-    .lnr-chevron-right{
-        position: relative;
         a{
             &:hover{
                 color: $blue;
             }
         }
+    }
+    .lnr-chevron-right{
+        position: relative;
         &::before{
             font-family: 'Linearicons-Free';
             position: absolute;
@@ -2002,7 +2037,7 @@
         ul{
             bottom: -15px;
             width: 220px;
-            left: -62px;
+            left: -65px;
             li{
                 padding: 10px 15px;
             }
@@ -2783,6 +2818,9 @@ ol{
 }
 .aside__info-item__subscribe{
     width: 165px;
+    a{
+        color: $blue;
+    }
 }
 .product__aside-author{
     text-align: center;
@@ -2972,7 +3010,7 @@ ol{
     }
 }
 .rate-star{
-    margin-right: 41px;
+    margin-right: 40px;
 }
 //end items__mini
 //end product-single page

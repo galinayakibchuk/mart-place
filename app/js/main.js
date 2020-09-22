@@ -43,7 +43,13 @@ $(function(){
         $('.sorting__category-new').removeClass('active');
     });
 
+    $('.header__user-btn').on('click', function(){
+        $('.header__top-inner').slideToggle();
+    });
 
+    $('.header__menu-btn').on('click', function(){
+        $('.header__menu').slideToggle();
+    });
 
     
     $('.rate-star').rateYo({
